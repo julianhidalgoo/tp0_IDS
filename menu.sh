@@ -52,7 +52,9 @@ while (( $opcion != 6 )); do
         grep "^$padron" $HOME/EPNro1/salida/$FILENAME.txt
     ;;
   esac
+#Se imprime el menu nuevamente
   echo -e "\n\n\n1) Crear entorno \n2) Correr proceso \n3) Listar alumnos por padron \n4) Mostrar 10 notas mas altas \n5) Ingresar padron y mostrar datos \n6) Cerrar programa\n\n\n"
   read opcion
 done
+
 echo "Programa finalizado"

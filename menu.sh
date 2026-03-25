@@ -3,12 +3,6 @@
 echo "Bienvenido, $USERNAME, elija una opcion"
 echo -e "1) Crear entorno \n2) Correr proceso \n3) Listar alumnos por padron \n4) Mostrar 10 notas mas altas \n5) Ingresar padron y mostrar datos \n6) Cerrar programa" 
 
-#Chequeo existencia de parametro
-if [[ "$1" == "-d" ]]; then
-  mv $HOME/EPNro1/consolidar.sh $HOME/
-  rm -r -f $HOME/EPNro1
-fi
-
 #Procesado de eleccion
 read opcion
 
@@ -56,5 +50,10 @@ while (( $opcion != 6 )); do
   echo -e "\n\n\n1) Crear entorno \n2) Correr proceso \n3) Listar alumnos por padron \n4) Mostrar 10 notas mas altas \n5) Ingresar padron y mostrar datos \n6) Cerrar programa\n\n\n"
   read opcion
 done
+
+if [[ "$1" == "-d" ]]; then
+  mv $HOME/EPNro1/consolidar.sh $HOME/
+  rm -r -f $HOME/EPNro1
+fi
 
 echo "Programa finalizado"
